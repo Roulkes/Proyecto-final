@@ -1,0 +1,56 @@
+package com.mycompany.ArrayList;
+ @author Aarón
+import java.util.*;
+
+public class MainStack {
+    public static void main(String[] args) {
+        
+    Stack<String> pila= new Stack<>();
+   
+
+        //las pilasss
+        pila.push("gatos");
+        pila.push("patos");
+        pila.push("Karlita <3 ");
+        pila.push("los tigres");
+        pila.push("chocolate");
+        pila.push("fornite");
+        pila.push("doom");
+  
+  
+        System.out.println("imprimiendo pila: " + pila);
+
+
+        String valor = pila.pop();
+        
+        System.out.println("valor eliminado: " + valor);
+        
+        System.out.println("capacidad: " + pila.capacity());
+      
+        //peek
+        System.out.println("operación peek");
+        
+        System.out.println(pila.peek());
+   
+   
+        if (pila.contains("patos")) {
+            System.out.println("esta pila si contiene patos ");
+            
+        }else{
+        System.out.println("lamentablemente no hay patosss"); //:(
+        }
+        
+        System.out.println("valor inicial");
+        System.out.println(pila.firstElement());
+        System.out.println("valor final");
+        System.out.println(pila.lastElement());
+        System.out.println(pila.toString());
+        pila.clear();
+        
+        if (pila.isEmpty()) {
+            System.out.println("esta vacia");
+        }
+        
+  }
+    
+}
