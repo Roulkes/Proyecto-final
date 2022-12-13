@@ -1,0 +1,88 @@
+package com.mycompany.ArrayList;
+ @author Aarón
+import java.util.*;
+
+public class MainArraylist {
+
+public static void main(String args[]) {
+
+//Empizo creando la lista
+ArrayList<String> list = new ArrayList<String>();           
+
+// Agregamos valores a la lista
+
+list.add("valor1");
+list.add("valor2");
+list.add(2, "valor3");
+list.add("valor4");
+
+//imprimimos los valores que tenemos
+
+System.out.println("Se tienen estos valores: " + list);
+
+// empezamos a iterar 
+Iterator<String> itr=list.iterator();
+while(itr.hasNext()){
+System.out.println(itr.next());
+}
+
+
+//procedemos a limpiarlo
+list.clear();
+
+System.out.println("Tenemos estos valores despues de limpiar: " + list);
+
+
+list.add("valor1");
+list.add("valor2");
+list.add("valor4");
+
+
+list.add(2, "valor3");
+list.add("valor2");
+
+
+int ultimo = list.lastIndexOf("valor2");
+
+System.out.println("Valor indice del valor2: " + ultimo);
+
+
+Object listClone = list.clone();        
+
+System.out.println("Lista clonadao: " + listClone);
+
+//vemos si si esta vacio
+boolean check = list.isEmpty();
+
+System.out.println("Vacio: " + check);
+
+
+int pos = list.indexOf("valor2");
+
+System.out.println("El indice del valor2: " + pos);
+boolean element = list.contains("valor5");
+System.out.println("el valor esta en la list valor5: " + element);
+
+// el valor con un indice
+String valor = list.get(0);
+
+System.out.println("El item en el índice 0 es: " + valor);
+
+
+// se reemplaza un valor
+
+// borramos el valor 0
+list.remove(0);
+
+// Borraando el valor3
+list.remove("valor3");
+// Borrando el índice 2
+list.remove(2);
+
+
+System.out.println("tu array tuvo los siguientes elementos: " + list);
+    System.out.println("el tamaño fue de");
+    System.out.println(list.size());
+}
+
+}
